@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title> مواقيت الصلوات</title>
+    <link rel="icon" href="mosque-svgrepo-com.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+/>
+
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    
+    <div> 
+                 <div style="margin-top: 30px">
+          <div style="color: #fff; margin-right: 40px">
+            
+            <div style="display: block;">
+
+              <h1 id="city-name">الرياض</h1>
+              <h5 id="country-name" style="margin-top: -50px;" >السعودية  <i  style="margin-right: 5px;" class="fa-solid fa-location-dot"></i> </h5>
+               <!---Weather -->
+               <div class="temp">
+                <div id="temperature"></div>
+                <div id="weather-icon" class="weather-icon"></div>
+              </div>
+              <!---Weather -->
+
+            </div>
+            <h6 id="date" style="font-size: 40px; font-weight: 150">
+              السبت 28 سبتمبر 2024
+            </h6>
+            <h6 id="datehijri" style="font-size: 40px; font-weight: 150">
+              السبت 28 سبتمبر 2024
+            </h6>
+          </div>
+          <hr style="margin: 5px 50px; border-color: cadetblue" />
+        </div>
+        <div class="search-bar" style="font-weight: 300;">
+          <select id="country-select" class="search-select">
+            <option value="">ابحث عن دولة</option>
+          </select>
+          <!-- <button id="country-select" class="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button> -->
+        </div>
+        <div class="search-bar">
+          <select id="city-select" class="search-select">
+            <option value="">اختر مدينة</option>
+          </select>
+          <br>
+          <button id="search-button" class="search-button" style="padding: 5px;">
+            احصل على الأوقات 
+          </button>
+        </div>
+  
+        <h2> <i class="fa-solid fa-mosque"></i> مواقيت الصلاة حسب المدينة</h2>
+        <div
+          class="center"
+          style="height: 300px; margin-top: 50px; justify-content: space-around"
+        >
+          <div class="card">
+            <div class="header"><h1>الفجر</h1></div>
+            <div class="body center" style="height: 80%">
+              <h1 class="time" id="fajr-time">5.00</h1>
+            </div>
+          </div>
+          <div class="card">
+            <div class="header"><h1>الشروق</h1></div>
+            <div class="body center" style="height: 80%">
+              <h1 class="time" id="sunrise-time">6.30</h1>
+            </div>
+          </div>
+          <div class="card">
+            <div class="header"><h1>الظهر</h1></div>
+            <div class="body center" style="height: 80%">
+              <h1 class="time" id="dhurh-time">12.58</h1>
+            </div>
+          </div>
+          <div class="card">
+            <div class="header"><h1>العصر</h1></div>
+            <div class="body center" style="height: 80%">
+              <h1 class="time" id="asr-time">16.13</h1>
+            </div>
+          </div>
+          <div class="card">
+            <div class="header"><h1>المغرب</h1></div>
+            <div class="body center" style="height: 80%">
+              <h1 class="time" id="sunset-time">18.48</h1>
+            </div>
+          </div>
+          <div class="card">
+            <div class="header"><h1>العشاء</h1></div>
+            <div class="body center" style="height: 80%">
+              <h1 class="time" id="isha-time">20:01</h1>
+            </div>
+          </div>
+          <div class="card">
+            <div class="header midnight"><h1>قيام الليل</h1></div>
+            <div class="body center" style="height: 80%">
+              <h1 class="time" id="midnight-time">01:15</h1>
+            </div>
+          </div>
+        </div>
+      
+         <div class="quran" style="display: block; color: white; text-align: center; font-weight: 600;"> 
+          <q> قال الله تعالى: ﴿ إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا ﴾ [النساء: 103].</q></div>
+    
+  
+    </div>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

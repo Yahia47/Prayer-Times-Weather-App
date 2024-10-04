@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    direction: rtl;
+    background-image: url("pexels-konevi-2236674.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Tajawal", sans-serif;
+    overflow-x: hidden;
+  }
+  h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+  }
+  .weather-icon i {
+    font-size: 50px;
+    color: #ffcc00;
+}
+
+  #city-name {
+    font-weight: 400;
+    font-size: 200px;
+    color: #fff;
+  }
+  .card {
+    width: 12%;
+    min-width: 150px;
+    height: 95%;
+    background-color: white;
+    font-size: 20px;
+    box-shadow: 0px 10px 5px rgb(0 0 0 / 30%);
+    border-radius: 10px;
+  }
+  .header {
+    background: linear-gradient(45deg, #5709ee, #7a37bf);
+    border-radius: 10px 10px 0 0;
+  }
+  .header h1 {
+    font-weight: 400;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .time {
+    font-size: 70px;
+  }
+  .search-bar {
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+  }
+  .search-input,
+  .search-select {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: border 0.3s;
+    font-weight: 700;
+    padding: 5px;
+  }
+  .search-input:focus,
+  .search-select:focus {
+    border-color: #5709ee;
+    outline: none;
+  }
+  .search-button {
+    height: 40px;
+    font-size: 18px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5709ee;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+  }
+  .search-button:hover {
+    background-color: #7a37bf;
+  }
+  
+  @media (max-width: 768px) {
+   
+    #city-name {
+      font-size: 100px;
+      font-weight: 500;
+      margin-bottom: 45px;
+      text-align: center;
+    }
+    #country-name {
+      font-size: 30px;
+      font-weight: 300;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+    .temp {
+      font-size: 15px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    hr {
+      display: none;
+    }
+    #date,
+    #datehijri {
+      font-size: 30px;
+      font-weight: 200;
+      text-align: center;
+    }
+    .search-input,
+    .search-select {
+      width: 60%;
+      font-size: 21px;
+      font-weight: 700;
+      padding: 5px;
+      text-align: center;
+    }
+    .search-button {
+      margin-bottom: 25px;
+      margin-top: 25px;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      width: 205px;
+    }
+    .center {
+      display: flex;
+      gap: 40px;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    .card {
+      width: 80%;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .header {
+      height: 30%;
+    }
+    .header h1 {
+      font-size: 50px;
+      font-weight: 600;
+      height: 200px;
+    }
+    .time {
+      font-size: 70px;
+      font-weight: 900;
+    }
+    .quran q {
+               /* display: flex; */
+        /* justify-content: center; */
+        bottom: 0;
+        position: absolute;
+        text-align: center;
+        margin: 0 20px;
+        left: 70px;
+        top: 417%;
+    }
+  }
+  
+  /* Adjusting for smaller screens */
+  
+  @media  (min-width: 768px) and (max-width: 1024px) {
+    /* Changed font-size from 200px to 100px for smaller screens */
+     body {
+      height: 250px;
+     }
+     hr {
+      display: none;
+     }
+    #city-name {
+      font-size: 100px;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 41px;
+      font-size: 45px;
+    }
+    #country-name {
+        text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    #country-name i  {
+       margin-left: 10px;
+    }
+    .temp {
+        text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+    #date,
+    #datehijri {
+        text-align: center;
+        font-weight: 400;
+        font-size: 50px;
+    }
+     .center {
+        display: flex;
+        gap: 35px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+     }
+    /* Changed width of card to 20% for better display */
+    .card {
+      width: 80%;
+      text-align: center;
+      max-height: 100%;
+      margin-bottom: 25px;
+    }
+     
+    .header h1 {
+      font-size: 40px; /* Changed from 50px for smaller screens */
+    }
+  
+    .time {
+      font-size: 50px; /* Reduced from 70px for better fit */
+    }
+  
+    .search-input,
+    .search-select {
+      width: 50%; /* Increased width to take more space */
+      font-size: 21px;
+      font-weight: 700;
+      text-align: center;
+    }
+     
+    .search-button {
+      width: 180px; /* Reduced width for better alignment */
+      font-size: 22px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+    h2 {
+      font-size: 55px;
+    }
+    .quran q {
+        bottom: 0;
+        position: absolute;
+        text-align: center;
+        margin: 0 20px;
+        left: 40px;
+        top: 97%;
+        font-size: 30px;
+        font-weight: 700;
+}
+.midnight h1 {
+    min-height: 60px;
+    font-size: 33px;
+    font-weight: 400;
+}
+  }
+
+  
+  
+
+  
+  /* Adjusting for Medium screens */
+  
+  @media  (min-width: 1024px) and (max-width: 1070px) {
+    /* Changed font-size from 200px to 100px for smaller screens */
+    #city-name {
+      font-size: 100px;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 41px;
+    }
+    #country-name {
+        text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .temp{
+        text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    #date,
+    #datehijri {
+        text-align: center;
+        font-weight: 500;
+    }
+     .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+     }
+    /* Changed width of card to 20% for better display */
+    .card {
+      width: 20%;
+    }
+  
+    .header h1 {
+      font-size: 40px; /* Changed from 50px for smaller screens */
+    }
+  
+    .time {
+      font-size: 50px; /* Reduced from 70px for better fit */
+    }
+  
+    .search-input,
+    .search-select {
+      width: 80%; /* Increased width to take more space */
+    }
+  
+    .search-button {
+      width: 180px; /* Reduced width for better alignment */
+    }
+    .quran q {
+        /* display: flex; */
+ /* justify-content: center; */
+ bottom: 0;
+ position: absolute;
+ text-align: center;
+ margin: 0 20px;
+ left: 200px;
+ top: 170%;
+}
+.midnight h1 {
+    min-height: 60px;
+    font-size: 33px;
+    font-weight: 400;
+}
+  }
+
+  
+  
+
+  
+  /* Adjusting for Large screens */
+  
+  @media  (min-width: 1070px) and (max-width: 1200px) {
+    /* Changed font-size from 200px to 100px for smaller screens */
+    #city-name {
+      font-size: 100px;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 41px;
+    }
+    #country-name {
+        text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .temp {
+        text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    #date,
+    #datehijri {
+        text-align: center;
+        font-weight: 500;
+    }
+     .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+     }
+    /* Changed width of card to 20% for better display */
+    .card {
+      width: 20%;
+    }
+  
+    .header h1 {
+      font-size: 40px; /* Changed from 50px for smaller screens */
+    }
+  
+    .time {
+      font-size: 50px; /* Reduced from 70px for better fit */
+    }
+  
+    .search-input,
+    .search-select {
+      width: 80%; /* Increased width to take more space */
+    }
+  
+    .search-button {
+      width: 180px; /* Reduced width for better alignment */
+    }
+    .quran q {
+        /* display: flex; */
+ /* justify-content: center; */
+ bottom: 0;
+ position: absolute;
+ text-align: center;
+ margin: 0 20px;
+ left: 300px;
+ top: 170%;
+}
+.midnight h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+  }
+
+  
+  
+
+  /* Adjusting for Large screens */
+  
+  @media  (max-width: 1200px) and  {
+    /* Changed font-size from 200px to 100px for smaller screens */
+   
+       .center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+       }
+      /* Changed width of card to 20% for better display */
+      .card {
+        width: 15%;
+      }
+    
+      .header h1 {
+        font-size: 30px; /* Changed from 50px for smaller screens */
+      }
+    
+      .time {
+        font-size: 40px; /* Reduced from 70px for better fit */
+      }
+    
+    
+      .quran q {
+          /* display: flex; */
+   /* justify-content: center; */
+   bottom: 0;
+   position: absolute;
+   text-align: center;
+   margin: 0 20px;
+   left: 300px;
+   top: 170%;
+  }
+  .midnight h1{
+    min-width: 10px;
+}
+
+  }
+
+  
+  
+
